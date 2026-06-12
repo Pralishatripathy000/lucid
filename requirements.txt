@@ -1,0 +1,16 @@
+transformers
+peft
+trl
+bitsandbytes
+accelerate
+datasets
+huggingface_hub
+wandb
+torch
+scikit-learn
+matplotlib
+fastapi
+uvicorn
+gradio
+requests
+numpy
