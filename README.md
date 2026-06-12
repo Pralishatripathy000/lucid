@@ -371,6 +371,42 @@ Training tracked at [wandb.ai/pralishatripathy000/lucid-hallucination-detector](
 
 ---
 
+## Results
+
+### Layer 2 — QLoRA Fine-tuned Judge (Llama 3.2 3B)
+
+| Metric | Value |
+|---|---|
+| F1 Score | 0.9744 |
+| AUROC | 0.9800 |
+| Accuracy | 97% |
+| Precision (Hallucinated) | 1.00 |
+| Recall (Hallucinated) | 0.95 |
+| Training samples | 2,000 |
+| Epochs | 3 |
+| Best eval loss | 0.629 |
+
+### Layer 1 — Activation Probe (Frozen Llama 3.2 3B)
+
+| Metric | Value |
+|---|---|
+| AUROC | 0.7785 |
+| F1 Score | 0.71 |
+| Accuracy | 71% |
+| Samples used | 1,000 (500 hallucinated + 500 clean) |
+| Layers probed | 8, 16, 24 |
+| Probe architecture | MLP (256→128→64) |
+
+## Trained Models
+
+| Model | HuggingFace |
+|---|---|
+| Layer 2 — QLoRA Judge | [pralishaaaaaaaa/lucid-layer2-llama32](https://huggingface.co/pralishaaaaaaaa/lucid-layer2-llama32) |
+| Layer 1 — Activation Probe | [pralishaaaaaaaa/lucid-layer1-probe](https://huggingface.co/pralishaaaaaaaa/lucid-layer1-probe) |
+
+Training tracked at [Weights & Biases](https://wandb.ai/pralishatripathy000-vit-bhopal/lucid-hallucination-detector)
+
+
 ## Key Papers
 
 - **"Language Models (Mostly) Know What They Know"** — Kadavath et al., Anthropic (2022)
